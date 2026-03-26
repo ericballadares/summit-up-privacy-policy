@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: March 26, 2026**
+**Last updated: March 27, 2026**
 
 ## Overview
 
@@ -47,6 +47,8 @@ Your data is used solely to provide the app's functionality:
 - **Friend system** — to allow you to connect with other hikers. Friends can view each other's profiles even if not set to public. Friend connections are visible only to the two users involved.
 - **Friend tagging** — when you tag a friend in the companions field of a hike log, their @username is stored as part of your hike data. A companion hike invite is sent to the tagged user.
 - **Per-hike privacy** — each hike and planned hike has a privacy setting (Only Me, Friends, Public). This controls who can see the hike when viewing your profile. Default is Friends.
+- **Planned hike visibility** — your upcoming planned hikes may be visible to friends or the public based on each plan's privacy setting, so friends or other hikers can see where you're headed next
+- **App updates** — the app checks for over-the-air updates on launch by contacting Expo's update servers (u.expo.dev). No personal data is sent in this request.
 
 We do **not** use your data for advertising, marketing, profiling, or any purpose other than operating the app.
 
@@ -78,7 +80,9 @@ Only you can see your profile. Others see a "This profile is private" message wi
 | Hikes set to "Public" | Yes | Yes | Never |
 | Hikes set to "Friends" | Never | Yes | Never |
 | Hikes set to "Only Me" | **Never** | **Never** | **Never** |
-| Planned hikes | **Never** | **Never** | **Never** |
+| Planned hikes set to "Public" | Yes | Yes | Never |
+| Planned hikes set to "Friends" | Never | Yes | Never |
+| Planned hikes set to "Only Me" | **Never** | **Never** | **Never** |
 | Submissions (reports, corrections, trails) | **Never** | **Never** | **Never** |
 
 You can toggle your public profile on or off at any time from the Profile edit screen. You can unfriend any user at any time.
@@ -94,6 +98,7 @@ You can toggle your public profile on or off at any time from the Profile edit s
 - Search input is sanitized to prevent injection attacks
 - Public profile stats (hike counts, province/region counts) are computed server-side via secure database functions — other users cannot access your individual hike logs
 - Theme preferences and welcome modal state are stored locally on your device via AsyncStorage
+- The app contacts **Expo's update servers** (u.expo.dev) on launch to check for app updates. Only the app version and update channel are sent — no personal data, device identifiers, or location data is transmitted
 
 ## Data Sharing
 
@@ -151,7 +156,7 @@ Email: ericsonballadares@gmail.com
 | Mother mountain | Profile display (first mountain climbed) | Public or friends |
 | Profile photo | Profile display | Public or friends |
 | Hike logs | Store your hiking history and stats | Never (only aggregate stats if public/friends) |
-| Planned hikes | Store your future plans | Never |
+| Planned hikes | Store your future plans | Based on per-plan privacy setting (friends/public) |
 | Trail reports | Community mountain data (reviewed before publishing) | Never |
 | Trail suggestions | Community trail data (reviewed before publishing) | Never |
 | Corrections | Improve mountain data accuracy (reviewed before applying) | Never |
