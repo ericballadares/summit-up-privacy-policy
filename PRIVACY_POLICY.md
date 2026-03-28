@@ -46,7 +46,7 @@ Your data is used solely to provide the app's functionality:
 - **Public profiles** — if you opt in, to display your username, display name, avatar, hiking stats (hike count, mountains, provinces, regions), most visited mountains, and a province heatmap to other users. Your email, home region, and home province are **never** shown to other users.
 - **User search** — to allow other users to find your profile by username or display name, only if you have enabled your public profile
 - **Friend system** — to allow you to connect with other hikers. Friends can view each other's profiles even if not set to public. Friend connections are visible only to the two users involved.
-- **Friend tagging** — when you tag a friend in the companions field of a hike log, their @username is stored as part of your hike data. A companion hike invite is sent to the tagged user.
+- **Friend tagging** — you can only tag accepted friends as companions in a hike log. Their @username is stored as part of your hike data. A companion hike invite is sent to the tagged user. Non-friends cannot be tagged.
 - **Per-hike privacy** — each hike and planned hike has a privacy setting (Only Me, Friends, Public). This controls who can see the hike when viewing your profile. Default is Friends.
 - **Planned hike visibility** — your upcoming planned hikes may be visible to friends or the public based on each plan's privacy setting, so friends or other hikers can see where you're headed next
 - **Packing checklists** — to help you prepare for planned hikes with a checklist of items to bring. Checklists are transferred to your completed hike record for reference.
