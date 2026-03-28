@@ -121,6 +121,7 @@ Your data is only accessible to:
 - **Your friends** — accepted friends can view your profile information as described in the Profile Visibility section, even if your profile is not set to public
 - **Other users** — only if you enable your public profile, and only the information listed in the Profile Visibility section above
 - **The developer and appointed reviewers** — for technical support, trail report review, trail suggestion review, and correction review only. Reviewers are trusted users appointed by the administrator who can view and act on submissions but cannot access your email, personal settings, or private data beyond what is included in the submission itself
+- **Administrator visibility** — the app administrator can view all profiles (including private ones) and all hike/plan data regardless of privacy settings, for moderation purposes (e.g. investigating reports, verifying ban reasons). The administrator can also remove mountain entries when necessary (e.g. duplicate or invalid data), which permanently deletes the mountain and all associated hike logs, planned hikes, and trails
 
 ## Your Rights
 
