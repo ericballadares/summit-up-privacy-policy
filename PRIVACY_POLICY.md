@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: March 28, 2026**
+**Last updated: March 29, 2026**
 
 ## Overview
 
@@ -54,7 +54,8 @@ Your data is used solely to provide the app's functionality:
 - **Hike photos** — photos you attach to hike logs are stored in Supabase Storage. Photos are auto-resized and compressed (1200px, 50% JPEG quality) before upload. Photos are publicly viewable if the hike's privacy is set to Public or Friends. Deleting a hike or removing a photo permanently removes the file from storage.
 - **Packing checklists** — to help you prepare for planned hikes with a checklist of items to bring. Checklists are transferred to your completed hike record for reference.
 - **Feedback** — feature requests and bug reports you submit are stored with your user ID, title, description, and submission date. Only you and the app administrator can view your submissions. The administrator may add response notes visible to you.
-- **Fingerprint login** — if you enable fingerprint login, your biometric data is processed **entirely on your device** by the operating system. We never receive, transmit, or store your fingerprint or biometric data. A lock preference flag is stored securely on your device using the operating system's secure keychain (Android Keystore / iOS Keychain).
+- **Fingerprint login** — if you enable fingerprint login, your biometric data is processed **entirely on your device** by the operating system. We never receive, transmit, or store your fingerprint or biometric data. A lock preference flag is stored securely on your device using the operating system's secure keychain (Android Keystore / iOS Keychain). If multiple accounts are used on the same device, each account's fingerprint preference is stored independently — enabling fingerprint on one account does not affect another.
+- **Account suspension** — if an administrator determines that your account violates our terms, your account may be suspended. When suspended, you will see a notification upon opening the app and be signed out. You may contact us to appeal.
 - **Email changes** — when you change your email, a one-time verification code is sent to the new email address to confirm the change.
 - **Map sharing** — you can save or share your Summit Map as an image. The image is generated locally on your device. If you choose to save it, the app requests access to your device's photo gallery. No data is sent to our servers during this process.
 - **Network status** — the app detects whether your device is online or offline to display a notification. No data is sent or collected during this check.
@@ -119,7 +120,7 @@ Your data is only accessible to:
 - **You** — through the app
 - **Your friends** — accepted friends can view your profile information as described in the Profile Visibility section, even if your profile is not set to public
 - **Other users** — only if you enable your public profile, and only the information listed in the Profile Visibility section above
-- **The developer** — for technical support, trail report review, trail suggestion review, and correction review only
+- **The developer and appointed reviewers** — for technical support, trail report review, trail suggestion review, and correction review only. Reviewers are trusted users appointed by the administrator who can view and act on submissions but cannot access your email, personal settings, or private data beyond what is included in the submission itself
 
 ## Your Rights
 
@@ -139,7 +140,7 @@ You have the right to:
 
 - Your data is retained as long as your account exists and the app remains operational
 - If the app is discontinued, all user data will be permanently deleted from our servers within 90 days of shutdown, and users will be notified in advance
-- When you delete your account, all associated data is permanently removed from our servers, including hike logs, photos, friend connections, checklists, and feedback
+- When you delete your account (or if your account is permanently suspended), all associated data is permanently removed from our servers, including hike logs, photos, friend connections, checklists, and feedback
 - We do not retain backups of deleted accounts
 - Theme preferences and local state stored on your device are cleared when you uninstall the app
 
