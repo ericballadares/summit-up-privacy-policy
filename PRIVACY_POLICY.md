@@ -56,6 +56,7 @@ Your data is used solely to provide the app's functionality:
 - **Feedback** — feature requests and bug reports you submit are stored with your user ID, title, description, and submission date. Only you and the app administrator can view your submissions. The administrator may add response notes visible to you.
 - **Fingerprint login** — if you enable fingerprint login, your biometric data is processed **entirely on your device** by the operating system. We never receive, transmit, or store your fingerprint or biometric data. A lock preference flag is stored securely on your device using the operating system's secure keychain (Android Keystore / iOS Keychain).
 - **Email changes** — when you change your email, a one-time verification code is sent to the new email address to confirm the change.
+- **Map sharing** — you can save or share your Summit Map as an image. The image is generated locally on your device. If you choose to save it, the app requests access to your device's photo gallery. No data is sent to our servers during this process.
 - **Network status** — the app detects whether your device is online or offline to display a notification. No data is sent or collected during this check.
 - **App updates** — the app checks for over-the-air updates on launch by contacting Expo's update servers (u.expo.dev). No personal data is sent in this request.
 
