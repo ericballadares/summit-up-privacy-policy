@@ -4,7 +4,7 @@
 
 ## Overview
 
-Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal developed by Eric Balladares. This privacy policy explains how we collect, use, and protect your information when you use the Summit Up mobile application.
+Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal developed by Ericson Balladares. This privacy policy explains how we collect, use, and protect your information when you use the Summit Up mobile application.
 
 ## Information We Collect
 
@@ -31,6 +31,7 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 ### Social Data
 - **Friend connections** — when you send or accept a friend request, we store the connection between your account and the other user's account
 - **Friend request status** — pending, accepted, or declined
+- **Activity status** — a timestamp of when you last opened the app is stored to show "Online" or "Last seen X ago" to your friends and public profile viewers. You can disable this in Settings. No location or device information is collected — only the timestamp.
 
 ### Automatically Collected Data
 - We do **not** collect device identifiers, location data, analytics, or crash reports
@@ -135,8 +136,9 @@ You have the right to:
 
 ## Data Retention
 
-- Your data is retained as long as your account exists
-- When you delete your account, all associated data is permanently removed from our servers, including friend connections
+- Your data is retained as long as your account exists and the app remains operational
+- If the app is discontinued, all user data will be permanently deleted from our servers within 90 days of shutdown, and users will be notified in advance
+- When you delete your account, all associated data is permanently removed from our servers, including hike logs, photos, friend connections, checklists, and feedback
 - We do not retain backups of deleted accounts
 - Theme preferences and local state stored on your device are cleared when you uninstall the app
 
@@ -152,7 +154,7 @@ We may update this privacy policy from time to time. Changes will be reflected b
 
 If you have questions about this privacy policy or your data, contact:
 
-**Eric Balladares**
+**Ericson Balladares**
 Email: ericsonballadares@gmail.com
 
 ## Summary
@@ -172,6 +174,7 @@ Email: ericsonballadares@gmail.com
 | Trail suggestions | Community trail data (reviewed before publishing) | Never |
 | Corrections | Improve mountain data accuracy (reviewed before applying) | Never |
 | Friend connections | Connect with other hikers | Only between the two friends |
+| Activity status | Show online/last seen to friends | Friends and public viewers (if enabled) |
 | Companion hike invites | Link tagged hikes to your account | Only between hike owner and tagged user |
 | Hike privacy setting | Control per-hike visibility | N/A |
 | Hike photos | Visual record of hikes (max 3, compressed) | Based on per-hike privacy setting |
