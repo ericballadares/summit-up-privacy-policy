@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: March 27, 2026**
+**Last updated: March 28, 2026**
 
 ## Overview
 
@@ -21,6 +21,7 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 ### Hiking Activity Data
 - **Hike logs** — date, duration, weather, companions (including tagged friends' usernames), privacy setting (Only Me, Friends, or Public), and notes you enter when logging a hike, including chain hikes (twin, trilogy, traverse)
 - **Planned hikes** — future hike dates, notes, privacy setting, and mountain selections you create
+- **Packing checklists** — items you add to planned hike checklists, and reusable checklist templates you create (up to 3)
 - **Companion hike invites** — when another user tags your @username as a companion, we store a link between their hike and your account. You can accept (adds to your hike history) or reject (removes the link). You can untag yourself at any time.
 - **Trail reports** — mountain information you submit for review (name, location, difficulty, trail class, classification, trails, notes)
 - **Trail suggestions** — new trail or trail edit suggestions you submit for existing mountains
@@ -48,6 +49,10 @@ Your data is used solely to provide the app's functionality:
 - **Friend tagging** — when you tag a friend in the companions field of a hike log, their @username is stored as part of your hike data. A companion hike invite is sent to the tagged user.
 - **Per-hike privacy** — each hike and planned hike has a privacy setting (Only Me, Friends, Public). This controls who can see the hike when viewing your profile. Default is Friends.
 - **Planned hike visibility** — your upcoming planned hikes may be visible to friends or the public based on each plan's privacy setting, so friends or other hikers can see where you're headed next
+- **Packing checklists** — to help you prepare for planned hikes with a checklist of items to bring. Checklists are transferred to your completed hike record for reference.
+- **Fingerprint login** — if you enable fingerprint login, your biometric data is processed **entirely on your device** by the operating system. We never receive, transmit, or store your fingerprint or biometric data. A lock preference flag is stored securely on your device using the operating system's secure keychain (Android Keystore / iOS Keychain).
+- **Email changes** — when you change your email, a one-time verification code is sent to the new email address to confirm the change.
+- **Network status** — the app detects whether your device is online or offline to display a notification. No data is sent or collected during this check.
 - **App updates** — the app checks for over-the-air updates on launch by contacting Expo's update servers (u.expo.dev). No personal data is sent in this request.
 
 We do **not** use your data for advertising, marketing, profiling, or any purpose other than operating the app.
@@ -97,7 +102,8 @@ You can toggle your public profile on or off at any time from the Profile edit s
 - Usernames are validated for format (lowercase, 3-20 characters, alphanumeric and underscores) and uniqueness
 - Search input is sanitized to prevent injection attacks
 - Public profile stats (hike counts, province/region counts) are computed server-side via secure database functions — other users cannot access your individual hike logs
-- Theme preferences and welcome modal state are stored locally on your device via AsyncStorage
+- Theme preferences, welcome modal state, and fingerprint login preference are stored locally on your device via AsyncStorage and SecureStore
+- **Biometric data** (fingerprint) is processed entirely by the device operating system and **never** transmitted to our servers
 - The app contacts **Expo's update servers** (u.expo.dev) on launch to check for app updates. Only the app version and update channel are sent — no personal data, device identifiers, or location data is transmitted
 
 ## Data Sharing
@@ -119,8 +125,10 @@ You have the right to:
 - **Manage friends** — send, accept, decline, or cancel friend requests; unfriend users at any time
 - **Manage companion invites** — accept or reject companion hike invites; untag yourself from any companion hike at any time
 - **Delete** individual hike logs and planned hikes
-- **Change your password** at any time from the Profile screen
-- **Delete your entire account** — available in Profile > Delete Account, which permanently removes all your data including hike logs, planned hikes, trail reports, trail suggestions, corrections, friend connections, profile information, and your authentication credentials
+- **Change your password** at any time from Settings
+- **Change your email** with OTP verification from Settings
+- **Enable/disable fingerprint login** from Settings
+- **Delete your entire account** — available in Settings > Delete Account, which permanently removes all your data including hike logs, planned hikes, checklists, trail reports, trail suggestions, corrections, friend connections, profile information, and your authentication credentials
 
 ## Data Retention
 
@@ -163,5 +171,7 @@ Email: ericsonballadares@gmail.com
 | Friend connections | Connect with other hikers | Only between the two friends |
 | Companion hike invites | Link tagged hikes to your account | Only between hike owner and tagged user |
 | Hike privacy setting | Control per-hike visibility | N/A |
+| Packing checklists | Prepare for hikes, transferred to hike log | Never |
+| Fingerprint biometric | Processed on device only, never transmitted | Never |
 | Theme preference | Stored locally on device only | Never |
 | Public profile setting | Control your visibility to other users | N/A |
