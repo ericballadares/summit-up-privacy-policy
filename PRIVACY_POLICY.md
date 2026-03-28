@@ -19,13 +19,14 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 - **Public profile setting** — your choice to make your profile visible to other users (off by default)
 
 ### Hiking Activity Data
-- **Hike logs** — date, duration, weather, companions (including tagged friends' usernames), privacy setting (Only Me, Friends, or Public), and notes you enter when logging a hike, including chain hikes (twin, trilogy, traverse)
+- **Hike logs** — date, duration, weather, companions (including tagged friends' usernames), privacy setting (Only Me, Friends, or Public), photos (up to 3, auto-compressed), and notes you enter when logging a hike, including chain hikes (twin, trilogy, traverse)
 - **Planned hikes** — future hike dates, notes, privacy setting, and mountain selections you create
 - **Packing checklists** — items you add to planned hike checklists, and reusable checklist templates you create (up to 3)
 - **Companion hike invites** — when another user tags your @username as a companion, we store a link between their hike and your account. You can accept (adds to your hike history) or reject (removes the link). You can untag yourself at any time.
 - **Trail reports** — mountain information you submit for review (name, location, difficulty, trail class, classification, trails, notes)
 - **Trail suggestions** — new trail or trail edit suggestions you submit for existing mountains
 - **Corrections** — suggestions you submit to correct existing mountain data
+- **Feedback** — feature requests and bug reports you submit (title, description)
 
 ### Social Data
 - **Friend connections** — when you send or accept a friend request, we store the connection between your account and the other user's account
@@ -49,7 +50,9 @@ Your data is used solely to provide the app's functionality:
 - **Friend tagging** — you can only tag accepted friends as companions in a hike log. Their @username is stored as part of your hike data. A companion hike invite is sent to the tagged user. Non-friends cannot be tagged.
 - **Per-hike privacy** — each hike and planned hike has a privacy setting (Only Me, Friends, Public). This controls who can see the hike when viewing your profile. Default is Friends.
 - **Planned hike visibility** — your upcoming planned hikes may be visible to friends or the public based on each plan's privacy setting, so friends or other hikers can see where you're headed next
+- **Hike photos** — photos you attach to hike logs are stored in Supabase Storage. Photos are auto-resized and compressed (1200px, 50% JPEG quality) before upload. Photos are publicly viewable if the hike's privacy is set to Public or Friends. Deleting a hike or removing a photo permanently removes the file from storage.
 - **Packing checklists** — to help you prepare for planned hikes with a checklist of items to bring. Checklists are transferred to your completed hike record for reference.
+- **Feedback** — feature requests and bug reports you submit are stored with your user ID, title, description, and submission date. Only you and the app administrator can view your submissions. The administrator may add response notes visible to you.
 - **Fingerprint login** — if you enable fingerprint login, your biometric data is processed **entirely on your device** by the operating system. We never receive, transmit, or store your fingerprint or biometric data. A lock preference flag is stored securely on your device using the operating system's secure keychain (Android Keystore / iOS Keychain).
 - **Email changes** — when you change your email, a one-time verification code is sent to the new email address to confirm the change.
 - **Network status** — the app detects whether your device is online or offline to display a notification. No data is sent or collected during this check.
@@ -171,7 +174,9 @@ Email: ericsonballadares@gmail.com
 | Friend connections | Connect with other hikers | Only between the two friends |
 | Companion hike invites | Link tagged hikes to your account | Only between hike owner and tagged user |
 | Hike privacy setting | Control per-hike visibility | N/A |
+| Hike photos | Visual record of hikes (max 3, compressed) | Based on per-hike privacy setting |
 | Packing checklists | Prepare for hikes, transferred to hike log | Never |
+| Feedback submissions | Feature requests and bug reports | Never (only admin can view) |
 | Fingerprint biometric | Processed on device only, never transmitted | Never |
 | Theme preference | Stored locally on device only | Never |
 | Public profile setting | Control your visibility to other users | N/A |
