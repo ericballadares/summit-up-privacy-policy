@@ -31,7 +31,7 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 ### Social Data
 - **Friend connections** — when you send or accept a friend request, we store the connection between your account and the other user's account
 - **Friend request status** — pending, accepted, or declined
-- **Activity status** — a timestamp of when you last opened the app is stored to show "Online" or "Last seen X ago" to your friends and public profile viewers. You can disable this in Settings. No location or device information is collected — only the timestamp.
+- **Activity status** — a timestamp of when you last opened the app is stored to show "Online" or "Last seen X ago" to your friends and public profile viewers. This is reciprocal: you only see activity status for friends who have also enabled it. You can disable this in Settings. No location or device information is collected — only the timestamp.
 
 ### Automatically Collected Data
 - We do **not** collect device identifiers, location data, analytics, or crash reports
