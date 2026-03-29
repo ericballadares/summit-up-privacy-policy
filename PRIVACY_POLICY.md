@@ -15,6 +15,7 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 - **Home region** — optional, set by you in your profile
 - **Home province** — optional, set by you in your profile
 - **Mother mountain** — optional, your first mountain climbed (auto-detected from earliest hike or manually set)
+- **Profile bio** — optional, up to 150 characters, set by you in your profile
 - **Profile photo** — optional, uploaded by you
 - **Public profile setting** — your choice to make your profile visible to other users (off by default)
 
@@ -45,7 +46,7 @@ Your data is used solely to provide the app's functionality:
 - **Planning** — to save and show your planned hikes with countdowns
 - **Trail reports, trail suggestions, and corrections** — to allow you to contribute mountain and trail data for community review
 - **Profile** — to personalize your experience within the app, including theme preferences
-- **Public profiles** — if you opt in, to display your username, display name, avatar, hiking stats (hike count, mountains, provinces, regions), most visited mountains, and a province heatmap to other users. Your email, home region, and home province are **never** shown to other users.
+- **Public profiles** — if you opt in, to display your username, display name, avatar, bio, hiking stats (hike count, mountains, provinces, regions), most visited mountains, and a province heatmap to other users. Your email, home region, and home province are **never** shown to other users.
 - **User search** — to allow other users to find your profile by username or display name, only if you have enabled your public profile
 - **Friend system** — to allow you to connect with other hikers. Friends can view each other's profiles even if not set to public. Friend connections are visible only to the two users involved.
 - **Friend tagging** — you can only tag accepted friends as companions in a hike log. Their @username is stored as part of your hike data. A companion hike invite is sent to the tagged user. Non-friends cannot be tagged.
@@ -80,6 +81,7 @@ Only you can see your profile. Others see a "This profile is private" message wi
 |---|---|---|---|
 | Username | Yes | Yes | Never |
 | Display name | Yes | Yes | Never |
+| Profile bio | Yes | Yes | Never |
 | Profile photo | Yes | Yes | Never |
 | Hike count, mountains, provinces, regions | Yes | Yes | Never |
 | Most visited mountains | Yes | Yes | Never |
@@ -167,6 +169,7 @@ Email: ericsonballadares@gmail.com
 | Email address | Authentication, password recovery, login | Never |
 | Username | Account identification, login | Public or friends |
 | Display name | Profile display, avatar initials | Public or friends |
+| Bio | Profile display | Public or friends |
 | Home region | Profile personalization | Never |
 | Home province | Profile personalization | Never |
 | Mother mountain | Profile display (first mountain climbed) | Public or friends |
