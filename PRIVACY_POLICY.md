@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: March 29, 2026**
+**Last updated: April 2, 2026**
 
 ## Overview
 
@@ -21,6 +21,7 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 
 ### Hiking Activity Data
 - **Hike logs** — date, duration, weather, companions (including tagged friends' usernames), privacy setting (Only Me, Friends, or Public), photos (up to 3, auto-compressed), and notes you enter when logging a hike, including chain hikes (twin, trilogy, traverse)
+- **Companion photos** — when you are tagged as a companion on another user's hike, you can add up to 3 photos to your companion record. If the hike owner removes you as a companion, your companion hike is converted to a standalone hike log (preserving your photos). If you untag yourself, your companion hikes record is deleted (including your photos)
 - **Planned hikes** — future hike dates, notes, privacy setting, and mountain selections you create
 - **Packing checklists** — items you add to planned hike checklists, and reusable checklist templates you create (up to 3)
 - **Companion hike invites** — when another user tags your @username as a companion, we store a link between their hike and your account. You can accept (adds to your hike history) or reject (removes the link). You can untag yourself at any time.
@@ -28,6 +29,7 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 - **Trail suggestions** — new trail or trail edit suggestions you submit for existing mountains
 - **Corrections** — suggestions you submit to correct existing mountain data
 - **Feedback** — feature requests and bug reports you submit (title, description)
+- **Bucket list** — mountains you save to your bucket list (mountain ID and date added). Your bucket list is private and not visible to other users
 
 ### Social Data
 - **Friend connections** — when you send or accept a friend request, we store the connection between your account and the other user's account
@@ -50,6 +52,7 @@ Your data is used solely to provide the app's functionality:
 - **User search** — to allow other users to find your profile by username or display name, only if you have enabled your public profile
 - **Friend system** — to allow you to connect with other hikers. Friends can view each other's profiles even if not set to public. Friend connections are visible only to the two users involved.
 - **Friend tagging** — you can only tag accepted friends as companions in a hike log. Their @username is stored as part of your hike data. A companion hike invite is sent to the tagged user. Non-friends cannot be tagged.
+- **Companion photos** — when you are tagged as a companion, you can add up to 3 photos to your companion record of that hike. These photos are auto-resized and compressed before storage. Companion photos are visible to the hike owner and to you (the companion) on the hike detail screen. If you untag yourself, your companion hikes record and all associated photos are permanently deleted. If the hike owner removes you, your companion record is converted to a standalone hike log so you retain your record and photos of that hike with privacy set to Friends.
 - **Per-hike privacy** — each hike and planned hike has a privacy setting (Only Me, Friends, Public). This controls who can see the hike when viewing your profile. Default is Friends.
 - **Planned hike visibility** — your upcoming planned hikes may be visible to friends or the public based on each plan's privacy setting, so friends or other hikers can see where you're headed next
 - **Hike photos** — photos you attach to hike logs are stored in Supabase Storage. Photos are auto-resized and compressed (1200px, 50% JPEG quality) before upload. Photos are publicly viewable if the hike's privacy is set to Public or Friends. Deleting a hike or removing a photo permanently removes the file from storage.
@@ -59,6 +62,8 @@ Your data is used solely to provide the app's functionality:
 - **Account suspension** — if an administrator determines that your account violates our terms, your account may be suspended. When suspended, you will see a notification upon opening the app and be signed out. You may contact us to appeal.
 - **Email changes** — when you change your email, a one-time verification code is sent to the new email address to confirm the change.
 - **Map sharing** — you can save or share your Summit Map as an image. Before saving or sharing, you can choose whether to display your display name or @username on the image. The image is generated locally on your device. If you choose to save it, the app requests access to your device's photo gallery. No data is sent to our servers during this process.
+- **Bucket list** — to save mountains you want to climb. Your bucket list is private and only visible to you.
+- **Community Stats** — the app displays aggregated, anonymous hiking statistics (most hiked mountains, popular provinces, monthly activity). No individual usernames or personal data are shown. All data is computed from aggregate hike counts.
 - **Network status** — the app detects whether your device is online or offline to display a notification. No data is sent or collected during this check.
 - **App updates** — the app checks for over-the-air updates on launch by contacting Expo's update servers (u.expo.dev). No personal data is sent in this request.
 
@@ -182,10 +187,12 @@ Email: ericsonballadares@gmail.com
 | Friend connections | Connect with other hikers | Only between the two friends |
 | Activity status | Show online/last seen to friends | Friends and public viewers (if enabled) |
 | Companion hike invites | Link tagged hikes to your account | Only between hike owner and tagged user |
+| Companion photos | Photos you add to companion hikes (max 3, compressed) | Only between hike owner and tagged user |
 | Hike privacy setting | Control per-hike visibility | N/A |
 | Hike photos | Visual record of hikes (max 3, compressed) | Based on per-hike privacy setting |
 | Packing checklists | Prepare for hikes, transferred to hike log | Never |
 | Feedback submissions | Feature requests and bug reports | Never (only admin can view) |
 | Fingerprint biometric | Processed on device only, never transmitted | Never |
 | Theme preference | Stored locally on device only | Never |
+| Bucket list | Save mountains to climb later | Never (private to you) |
 | Public profile setting | Control your visibility to other users | N/A |
