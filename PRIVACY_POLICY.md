@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: April 2, 2026**
+**Last updated: April 3, 2026**
 
 ## Overview
 
@@ -39,7 +39,7 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 ### Push Notification Data
 - **FCM push tokens** — Firebase Cloud Messaging tokens stored per device to deliver notifications
 - **Notification preferences** — whether you have push notifications enabled (toggleable in Settings)
-- **Notification records** — notification history including type (friend request, companion invite, feedback, submission review), timestamp, and read status
+- **Notification records** — notification history including type (friend request, companion invite, feedback, submission review), timestamp, and read status. Automatically deleted after 30 days
 - Push tokens are refreshed on every app launch and deleted when you sign out or disable push notifications in Settings
 - Notifications are sent via Expo Push API and Firebase Cloud Messaging — no personal data is sent with the push delivery itself beyond the notification ID and deep-link
 
@@ -205,4 +205,4 @@ Email: ericsonballadares@gmail.com
 | Bucket list | Save mountains to climb later | Never (private to you) |
 | Public profile setting | Control your visibility to other users | N/A |
 | FCM push tokens | Enable push notifications for friend requests, companion invites, and feedback | Stored on device and server (deleted on sign out or notification disable) |
-| Push notification records | Track notifications you receive, mark as read | Only visible to you |
+| Push notification records | Track notifications you receive, mark as read | Only visible to you, auto-deleted after 30 days |
