@@ -36,8 +36,15 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 - **Friend request status** — pending, accepted, or declined
 - **Activity status** — a timestamp of when you last opened the app is stored to show "Online" or "Last seen X ago" to your friends and public profile viewers. This is reciprocal: you only see activity status for friends who have also enabled it. You can disable this in Settings. No location or device information is collected — only the timestamp.
 
+### Push Notification Data
+- **FCM push tokens** — Firebase Cloud Messaging tokens stored per device to deliver notifications
+- **Notification preferences** — whether you have push notifications enabled (toggleable in Settings)
+- **Notification records** — notification history including type (friend request, companion invite, feedback, submission review), timestamp, and read status
+- Push tokens are refreshed on every app launch and deleted when you sign out or disable push notifications in Settings
+- Notifications are sent via Expo Push API and Firebase Cloud Messaging — no personal data is sent with the push delivery itself beyond the notification ID and deep-link
+
 ### Automatically Collected Data
-- We do **not** collect device identifiers, location data, analytics, or crash reports
+- We do **not** collect device identifiers (except FCM tokens, which are cryptographic device tokens for delivery only), location data, analytics, or crash reports
 - We do **not** use third-party tracking or advertising SDKs
 
 ## How We Use Your Information
@@ -65,6 +72,7 @@ Your data is used solely to provide the app's functionality:
 - **Bucket list** — to save mountains you want to climb. Your bucket list is private and only visible to you.
 - **Community Stats** — the app displays aggregated, anonymous hiking statistics (most hiked mountains, popular provinces, monthly activity). No individual usernames or personal data are shown. All data is computed from aggregate hike counts.
 - **Network status** — the app detects whether your device is online or offline to display a notification. No data is sent or collected during this check.
+- **Push notifications** — when you have push notifications enabled, your FCM device token is stored and used to deliver notifications about friend requests, companion hikes, feedback responses, and submission reviews. Notifications are managed through Expo Push and Firebase Cloud Messaging services. The notification service only receives the notification type, content, and deep-link destination — your personal data is not transmitted in the push delivery itself.
 - **App updates** — the app checks for over-the-air updates on launch by contacting Expo's update servers (u.expo.dev). No personal data is sent in this request.
 
 We do **not** use your data for advertising, marketing, profiling, or any purpose other than operating the app.
@@ -196,3 +204,5 @@ Email: ericsonballadares@gmail.com
 | Theme preference | Stored locally on device only | Never |
 | Bucket list | Save mountains to climb later | Never (private to you) |
 | Public profile setting | Control your visibility to other users | N/A |
+| FCM push tokens | Enable push notifications for friend requests, companion invites, and feedback | Stored on device and server (deleted on sign out or notification disable) |
+| Push notification records | Track notifications you receive, mark as read | Only visible to you |
