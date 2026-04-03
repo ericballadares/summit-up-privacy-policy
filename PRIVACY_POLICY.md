@@ -155,6 +155,7 @@ You have the right to:
 ## Data Retention
 
 - Your data is retained as long as your account exists and the app remains operational
+- **Submission retention** — approved and rejected submissions (trail reports, corrections, trail suggestions) are automatically deleted 30 days after review. Pending submissions are never auto-deleted. Aggregate submission counts (approved/rejected totals) are preserved on your profile even after the original submissions are deleted
 - If the app is discontinued, all user data will be permanently deleted from our servers within 90 days of shutdown, and users will be notified in advance
 - When you delete your account (or if your account is permanently suspended), all associated data is permanently removed from our servers, including hike logs, photos, friend connections, checklists, and feedback
 - We do not retain backups of deleted accounts
