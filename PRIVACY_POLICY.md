@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: April 3, 2026**
+**Last updated: April 6, 2026**
 
 ## Overview
 
@@ -119,9 +119,11 @@ You can toggle your public profile on or off at any time from the Profile edit s
 - Data is transmitted over **HTTPS** (encrypted in transit)
 - Data is stored in a **password-protected database** with Row Level Security (RLS) policies on all tables, ensuring users can only access their own data (unless they opt into a public profile or have an accepted friendship, in which case only the data described above is visible)
 - Friend connections are protected by RLS — only the two users in a friendship can view, modify, or delete it
+- Hike privacy is enforced at the database level — hikes set to "Only Me" or "Friends" are not accessible to unauthorized users even via direct database queries
+- Role changes (e.g., user to admin) are protected by a database trigger — only administrators can modify user roles
 - Profile photos are stored in **Supabase Storage** with access controls restricting uploads to the photo owner
 - Usernames are validated for format (lowercase, 3-20 characters, alphanumeric and underscores) and uniqueness
-- Search input is sanitized to prevent injection attacks
+- Search input is sanitized to prevent injection attacks (allowlist filtering and wildcard escaping)
 - Public profile stats (hike counts, province/region counts) are computed server-side via secure database functions — other users cannot access your individual hike logs
 - Theme preferences, welcome modal state, and fingerprint login preference are stored locally on your device via AsyncStorage and SecureStore
 - **Biometric data** (fingerprint) is processed entirely by the device operating system and **never** transmitted to our servers
@@ -155,7 +157,7 @@ You have the right to:
 ## Data Retention
 
 - Your data is retained as long as your account exists and the app remains operational
-- **Submission retention** — approved and rejected submissions (trail reports, corrections, trail suggestions) are automatically deleted 30 days after review. Pending submissions are never auto-deleted. Aggregate submission counts (approved/rejected totals) are preserved on your profile even after the original submissions are deleted
+- **Submission retention** — approved and rejected submissions (trail reports, corrections, trail suggestions) are automatically deleted 30 days after review. Pending submissions are automatically deleted after 90 days. Aggregate submission counts (approved/rejected totals) are preserved on your profile even after the original submissions are deleted
 - If the app is discontinued, all user data will be permanently deleted from our servers within 90 days of shutdown, and users will be notified in advance
 - When you delete your account (or if your account is permanently suspended), all associated data is permanently removed from our servers, including hike logs, photos, friend connections, checklists, and feedback
 - We do not retain backups of deleted accounts
