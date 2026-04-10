@@ -61,6 +61,7 @@ Your data is used solely to provide the app's functionality:
 - **Friend tagging** — you can only tag accepted friends as companions in a hike log. Their @username is stored as part of your hike data. A companion hike invite is sent to the tagged user. Non-friends cannot be tagged.
 - **Companion photos** — when you are tagged as a companion, you can add up to 3 photos to your companion record of that hike. These photos are auto-resized and compressed before storage. Companion photos are visible to the hike owner and to you (the companion) on the hike detail screen. If you untag yourself, your companion hikes record and all associated photos are permanently deleted. If the hike owner removes you, your companion record is converted to a standalone hike log so you retain your record and photos of that hike with privacy set to Friends.
 - **Per-hike privacy** — each hike and planned hike has a privacy setting (Only Me, Friends, Public). This controls who can see the hike when viewing your profile. Default is Friends.
+- **Companion access exception** — when you tag a friend as a companion on a hike log, that friend can read the hike's content (mountain, date, photos, notes) regardless of your privacy setting, including "Only Me." This is necessary so your companions can see the hike they were on. Removing the companion (or having them untag themselves) revokes that access immediately.
 - **Planned hike visibility** — your upcoming planned hikes may be visible to friends or the public based on each plan's privacy setting, so friends or other hikers can see where you're headed next
 - **Hike photos** — photos you attach to hike logs are stored in Supabase Storage. Photos are auto-resized and compressed (1200px, 50% JPEG quality) before upload. Photos are publicly viewable if the hike's privacy is set to Public or Friends. Deleting a hike or removing a photo permanently removes the file from storage.
 - **Packing checklists** — to help you prepare for planned hikes with a checklist of items to bring. Checklists are transferred to your completed hike record for reference.
@@ -105,7 +106,7 @@ Only you can see your profile. Others see a "This profile is private" message wi
 | Home province | **Never** | **Never** | **Never** |
 | Hikes set to "Public" | Yes | Yes | Never |
 | Hikes set to "Friends" | Never | Yes | Never |
-| Hikes set to "Only Me" | **Never** | **Never** | **Never** |
+| Hikes set to "Only Me" | **Never** | **Never** | Tagged companions only |
 | Planned hikes set to "Public" | Yes | Yes | Never |
 | Planned hikes set to "Friends" | Never | Yes | Never |
 | Planned hikes set to "Only Me" | **Never** | **Never** | **Never** |
