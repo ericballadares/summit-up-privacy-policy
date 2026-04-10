@@ -20,7 +20,7 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 - **Public profile setting** — your choice to make your profile visible to other users (off by default)
 
 ### Hiking Activity Data
-- **Hike logs** — date, duration, weather, companions (including tagged friends' usernames), privacy setting (Only Me, Friends, or Public), photos (up to 3, auto-compressed), and notes you enter when logging a hike, including chain hikes (twin, trilogy, traverse)
+- **Hike logs** — date, duration, weather, companions (including tagged friends' usernames), privacy setting (Only Me, Friends, or Public), photos (up to 3, auto-compressed), notes, and optional difficulty rating (1-9) you enter when logging a hike, including chain hikes (twin, trilogy, traverse). For chain hikes, each mountain can have its own difficulty rating.
 - **Companion photos** — when you are tagged as a companion on another user's hike, you can add up to 3 photos to your companion record. If the hike owner removes you as a companion, your companion hike is converted to a standalone hike log (preserving your photos). If you untag yourself, your companion hikes record is deleted (including your photos)
 - **Planned hikes** — future hike dates, notes, privacy setting, and mountain selections you create
 - **Packing checklists** — items you add to planned hike checklists, and reusable checklist templates you create (up to 3)
@@ -30,6 +30,7 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 - **Corrections** — suggestions you submit to correct existing mountain data
 - **Feedback** — feature requests and bug reports you submit (title, description)
 - **Bucket list** — mountains you save to your bucket list (mountain ID and date added). Your bucket list is private and not visible to other users
+- **Mountain tag votes** — when you vote for a community tag on a mountain (e.g., "Day Hike Friendly", "Has Ropes"), we store your user ID, the mountain, and the tag. Your votes contribute to public aggregate counts shown on mountain detail. You can remove your vote at any time by tapping the tag again.
 
 ### Social Data
 - **Friend connections** — when you send or accept a friend request, we store the connection between your account and the other user's account
@@ -111,6 +112,8 @@ Only you can see your profile. Others see a "This profile is private" message wi
 | Planned hikes set to "Friends" | Never | Yes | Never |
 | Planned hikes set to "Only Me" | **Never** | **Never** | **Never** |
 | Submissions (reports, corrections, trails) | **Never** | **Never** | **Never** |
+| Mountain tag votes | Public (aggregate counts) | Public (aggregate counts) | Public (aggregate counts) |
+| Difficulty rating (on hike logs) | Follows hike privacy | Follows hike privacy | Follows hike privacy |
 
 You can toggle your public profile on or off at any time from the Profile edit screen. You can unfriend any user at any time.
 
