@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: April 6, 2026**
+**Last updated: April 10, 2026**
 
 ## Overview
 
