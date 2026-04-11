@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: April 10, 2026**
+**Last updated: April 12, 2026**
 
 ## Overview
 
@@ -25,12 +25,13 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 - **Planned hikes** — future hike dates, notes, privacy setting, and mountain selections you create
 - **Packing checklists** — items you add to planned hike checklists, and reusable checklist templates you create (up to 3)
 - **Companion hike invites** — when another user tags your @username as a companion, we store a link between their hike and your account. You can accept (adds to your hike history) or reject (removes the link). You can untag yourself at any time.
-- **Trail reports** — mountain information you submit for review (name, location, difficulty, trail class, classification, trails, notes)
+- **Trail reports** — mountain information you submit for review (name, location, coordinates, difficulty, trail class, classification, description, days required, trails, notes)
 - **Trail suggestions** — new trail or trail edit suggestions you submit for existing mountains
 - **Corrections** — suggestions you submit to correct existing mountain data
 - **Feedback** — feature requests and bug reports you submit (title, description)
 - **Bucket list** — mountains you save to your bucket list (mountain ID and date added). Your bucket list is private and not visible to other users
 - **Mountain tag votes** — when you vote for a community tag on a mountain (e.g., "Day Hike Friendly", "Has Ropes"), we store your user ID, the mountain, and the tag. Your votes contribute to public aggregate counts shown on mountain detail. You can remove your vote at any time by tapping the tag again.
+- **Conditions vote** — when logging or editing a hike, you can optionally vote whether conditions were good for that month. This is stored as a boolean on your hike log (per mountain for chain hikes). Your vote contributes to the community "Best Months" heatmap shown on the mountain detail page. Individual votes are not attributed — only aggregate counts are displayed.
 
 ### Social Data
 - **Friend connections** — when you send or accept a friend request, we store the connection between your account and the other user's account
@@ -114,6 +115,7 @@ Only you can see your profile. Others see a "This profile is private" message wi
 | Submissions (reports, corrections, trails) | **Never** | **Never** | **Never** |
 | Mountain tag votes | Public (aggregate counts) | Public (aggregate counts) | Public (aggregate counts) |
 | Difficulty rating (on hike logs) | Follows hike privacy | Follows hike privacy | Follows hike privacy |
+| Conditions vote (on hike logs) | Public (aggregate only) | Public (aggregate only) | Public (aggregate only) |
 
 You can toggle your public profile on or off at any time from the Profile edit screen. You can unfriend any user at any time.
 
@@ -212,4 +214,5 @@ Email: ericsonballadares@gmail.com
 | Bucket list | Save mountains to climb later | Never (private to you) |
 | Public profile setting | Control your visibility to other users | N/A |
 | FCM push tokens | Enable push notifications for friend requests, companion invites, and feedback | Stored on device and server (deleted on sign out or notification disable) |
+| Conditions vote | Community best months heatmap (aggregate only) | Public (aggregate counts, not attributed) |
 | Push notification records | Track notifications you receive, mark as read | Only visible to you, auto-deleted after 30 days |
