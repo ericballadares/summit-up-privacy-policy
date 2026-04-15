@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: April 12, 2026**
+**Last updated: April 15, 2026** · **Version: 2**
 
 ## Overview
 
@@ -137,10 +137,49 @@ You can toggle your public profile on or off at any time from the Profile edit s
 - Profile photos are stored in **Supabase Storage** with access controls restricting uploads to the photo owner
 - Usernames are validated for format (lowercase, 3-20 characters, alphanumeric and underscores) and uniqueness
 - Search input is sanitized to prevent injection attacks (allowlist filtering and wildcard escaping)
+- **Fuzzy search** — mountain names and usernames are indexed for typo-tolerant search using standard PostgreSQL trigram similarity. No additional data is collected for this; only the normalized text of the same fields you already provide (name, username) is indexed
+- **Admin audit log** — every administrative action (role changes, bans, content-flag resolutions) is automatically recorded with actor, action, target, and timestamp, visible only to administrators. This is a safeguard against misuse of admin tools and is not used for any other purpose
 - Public profile stats (hike counts, province/region counts) are computed server-side via secure database functions — other users cannot access your individual hike logs
 - Theme preferences, welcome modal state, and fingerprint login preference are stored locally on your device via AsyncStorage and SecureStore
 - **Biometric data** (fingerprint) is processed entirely by the device operating system and **never** transmitted to our servers
 - The app contacts **Expo's update servers** (u.expo.dev) on launch to check for app updates. Only the app version and update channel are sent — no personal data, device identifiers, or location data is transmitted
+
+## Third-Party Services
+
+The app contacts the following third-party services during normal operation. None of these services receive your email, username, hike data, or any other personal information unless explicitly noted.
+
+- **Supabase** (AWS-hosted) — primary database and file storage. All personal data is stored here under Row Level Security policies.
+- **Expo Push + Firebase Cloud Messaging (FCM)** — push notification delivery. Receives your device's cryptographic push token and the notification payload (type, title, body, deep-link). No personal data is transmitted in the push payload.
+- **Expo Updates (u.expo.dev)** — over-the-air update server, contacted on app launch. Receives only the app version and update channel.
+- **Resend (summit-up.com domain)** — transactional email provider (email confirmation, password reset, email change OTP). Receives the recipient email address and template content only.
+- **Open-Meteo (open-meteo.com)** — free weather API, contacted when you view a mountain's detail screen to fetch a 7-day forecast. Receives the mountain's latitude and longitude (the mountain's coordinates, not your device location). No account, user identifier, or personal data is sent. No API key required.
+- **Ko-fi and GCash** — optional donation links under Settings. Tapping these opens the external app or browser. No user data is transmitted to Ko-fi or GCash by Summit Up; any data collected by those services is governed by their own privacy policies.
+
+We do **not** use any analytics, advertising, crash reporting, fingerprinting, or tracking SDKs.
+
+## Content Moderation
+
+To keep the community safe and the app free from spam, certain free-text fields you write are automatically scanned at the database for patterns that commonly indicate solicitation or spam. The scanned fields are:
+
+- **Profile bio** (up to 150 characters)
+- **Hike notes** (up to 1000 characters)
+- **Trail report name + description** (your submitted mountain proposals)
+
+The scan looks for: URLs and naked domains, phone numbers (Philippine mobile format + common groupings), known spam keywords (e.g. "click here", "telegram", "whatsapp", "crypto", "bitcoin", "forex", "onlyfans", "buy now"), 5+ repeated characters, and 20+ character text that is ≥70% uppercase. The scan runs **on our database, not on our servers or on third parties** — no content leaves the database for moderation purposes.
+
+**What happens when content is flagged:**
+
+- The content is still saved; flagging does not block you from posting.
+- A flag record is created containing: your user ID, the flagged text, the detected signals, and a timestamp. Duplicate flags (same text already pending for the same user) are skipped.
+- The administrator (and any appointed reviewers) can see the flag in the admin Content Flags queue and take one of three actions:
+  - **Dismiss** — no further action, flag marked resolved
+  - **Clear content** — the flagged text is cleared (bio → null, notes → null, trail report description → null; the trail report name is preserved because admin still needs to review the submission). The original content is not retained after clearing.
+  - **Ban** — sets your account as banned (same as a user-reported ban; you can contact us to appeal)
+- You can see the flags on your own content via Supabase RLS — the admin UI for user-facing flag visibility is planned but not yet built.
+
+**Admin audit trail.** Every administrator action on your account (role change, ban, flag resolution) is recorded in an admin audit log visible only to administrators. This provides accountability and allows us to investigate any misuse of administrative tools.
+
+**Bypass note.** The client app warns you in advance when your input trips a signal, so legitimate content (e.g., a casual mention of Instagram or Telegram) can be reviewed by you before saving. The database-level scan is authoritative and cannot be bypassed by using a modified client or direct API calls.
 
 ## Data Sharing
 
@@ -165,7 +204,8 @@ You have the right to:
 - **Change your password** at any time from Settings
 - **Change your email** with OTP verification from Settings
 - **Enable/disable fingerprint login** from Settings
-- **Delete your entire account** — available in Settings > Delete Account, which permanently removes all your data including hike logs, planned hikes, checklists, trail reports, trail suggestions, corrections, friend connections, profile information, and your authentication credentials
+- **Delete your entire account** — available in Settings > Delete Account, which permanently removes all your data including hike logs, planned hikes, checklists, trail reports, trail suggestions, corrections, friend connections, profile information, uploaded photos (avatars and hike photos), and your authentication credentials
+- **Export your data** — available in Settings > Privacy > Export My Data. Downloads a JSON file containing your profile, hike logs, planned hikes, companion hikes, submissions, checklists, bucket list, feedback, friendships, reactions, tag votes, and trail condition updates. The file is generated on-demand and shared via your device's share sheet; it is not stored on our servers after generation. Rate-limited to once per 24 hours per account to prevent abuse
 
 ## Data Retention
 
@@ -226,3 +266,6 @@ Email: ericsonballadares@gmail.com
 | Hike cost | Personal expense tracking | Only visible to you (anonymous aggregate on mountain detail) |
 | Hike type (DIY/Tour/Hybrid) | Context for cost data | Anonymous aggregate on mountain detail |
 | Push notification records | Track notifications you receive, mark as read | Only visible to you, auto-deleted after 30 days |
+| Mountain coordinates (for weather) | Fetch 7-day forecast from Open-Meteo when you view a mountain detail | Only mountain's lat/lng sent — never your device location |
+| Content flags (auto-generated) | Flag bios, hike notes, and trail reports that match spam patterns for admin review | Visible only to you, admin, and reviewers; content cleared or dismissed — not retained after resolution |
+| Admin audit log | Record admin actions (role changes, bans, flag resolutions) for accountability | Visible only to administrators |
