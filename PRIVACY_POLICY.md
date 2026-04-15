@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: April 15, 2026** · **Version: 2**
+**Last updated: April 15, 2026** · **Version: 3**
 
 ## Overview
 
@@ -154,6 +154,7 @@ The app contacts the following third-party services during normal operation. Non
 - **Resend (summit-up.com domain)** — transactional email provider (email confirmation, password reset, email change OTP). Receives the recipient email address and template content only.
 - **Open-Meteo (open-meteo.com)** — free weather API, contacted when you view a mountain's detail screen to fetch a 7-day forecast. Receives the mountain's latitude and longitude (the mountain's coordinates, not your device location). No account, user identifier, or personal data is sent. No API key required.
 - **Ko-fi and GCash** — optional donation links under Settings. Tapping these opens the external app or browser. No user data is transmitted to Ko-fi or GCash by Summit Up; any data collected by those services is governed by their own privacy policies.
+- **Sentry (sentry.io)** — automated error and crash monitoring. Receives the JavaScript error message, stack trace, breadcrumbs (last ~50 actions such as screen transitions, taps, and network calls), your user ID, app version, update ID, and OS/device class. Used only to detect and diagnose bugs. Sensitive strings (passwords, tokens, authorization headers) are scrubbed from breadcrumbs before sending. No hike data, photos, or personal messages are transmitted. Sentry retains events for 30 days on the free tier.
 
 We do **not** use any analytics, advertising, crash reporting, fingerprinting, or tracking SDKs.
 
@@ -269,3 +270,5 @@ Email: ericsonballadares@gmail.com
 | Mountain coordinates (for weather) | Fetch 7-day forecast from Open-Meteo when you view a mountain detail | Only mountain's lat/lng sent — never your device location |
 | Content flags (auto-generated) | Flag bios, hike notes, and trail reports that match spam patterns for admin review | Visible only to you, admin, and reviewers; content cleared or dismissed — not retained after resolution |
 | Admin audit log | Record admin actions (role changes, bans, flag resolutions) for accountability | Visible only to administrators |
+| Device location (optional) | Compute distance to nearby mountains ("Mountains Near Me"). Only used when you open that screen; permission is requested in-context | Never sent to our servers — used locally on your device only |
+| Error/crash reports (Sentry) | Diagnose bugs: JS stack traces, breadcrumbs, user ID, app version | Sent to Sentry.io only; sensitive fields are scrubbed |
