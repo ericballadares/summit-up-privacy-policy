@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: April 15, 2026** · **Version: 3**
+**Last updated: April 16, 2026** · **Version: 4**
 
 ## Overview
 
@@ -40,6 +40,8 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 - **Friend connections** — when you send or accept a friend request, we store the connection between your account and the other user's account
 - **Friend request status** — pending, accepted, or declined
 - **Activity status** — a timestamp of when you last opened the app is stored to show "Online" or "Last seen X ago" to your friends and public profile viewers. This is reciprocal: you only see activity status for friends who have also enabled it. You can disable this in Settings. No location or device information is collected — only the timestamp.
+- **User reports** — when you report another user (for harassment, spam, fake profile, inappropriate content, or other reasons), we store your user ID, the reported user's ID, the reason category, an optional description you write, and a timestamp. Reports are visible only to the administrator and appointed reviewers, who may dismiss, warn, or ban the reported account. You can report the same user only once; submitting again returns an "already reported" notice.
+- **Global announcements** — the administrator may send broadcast messages (feature announcements, service notices) that are delivered to every non-banned user as a notification. We store the message text and the sender's user ID; each recipient's read-status is tracked in their own notification record (see Push Notification Data).
 
 ### Push Notification Data
 - **FCM push tokens** — Firebase Cloud Messaging tokens stored per device to deliver notifications
@@ -134,7 +136,7 @@ You can toggle your public profile on or off at any time from the Profile edit s
 - Friend connections are protected by RLS — only the two users in a friendship can view, modify, or delete it
 - Hike privacy is enforced at the database level — hikes set to "Only Me" or "Friends" are not accessible to unauthorized users even via direct database queries
 - Role changes (e.g., user to admin) are protected by a database trigger — only administrators can modify user roles
-- Profile photos are stored in **Supabase Storage** with access controls restricting uploads to the photo owner
+- Profile photos and hike photos are stored in **Supabase Storage** with access controls restricting uploads to the photo owner. The storage buckets enforce a 5 MB file size cap and accept only JPEG / PNG / WebP images; non-image or oversized uploads are rejected at the server.
 - Usernames are validated for format (lowercase, 3-20 characters, alphanumeric and underscores) and uniqueness
 - Search input is sanitized to prevent injection attacks (allowlist filtering and wildcard escaping)
 - **Fuzzy search** — mountain names and usernames are indexed for typo-tolerant search using standard PostgreSQL trigram similarity. No additional data is collected for this; only the normalized text of the same fields you already provide (name, username) is indexed
@@ -201,6 +203,7 @@ You have the right to:
 - **Control visibility** — toggle your public profile on or off at any time
 - **Manage friends** — send, accept, decline, or cancel friend requests; unfriend users at any time
 - **Manage companion invites** — accept or reject companion hike invites; untag yourself from any companion hike at any time
+- **Report another user** — from a user's profile, submit a report with a reason category (harassment, spam, fake profile, inappropriate content, other) and optional description. The administrator reviews and may dismiss, warn, or ban the reported account.
 - **Delete** individual hike logs and planned hikes
 - **Change your password** at any time from Settings
 - **Change your email** with OTP verification from Settings
@@ -270,5 +273,7 @@ Email: ericsonballadares@gmail.com
 | Mountain coordinates (for weather) | Fetch 7-day forecast from Open-Meteo when you view a mountain detail | Only mountain's lat/lng sent — never your device location |
 | Content flags (auto-generated) | Flag bios, hike notes, and trail reports that match spam patterns for admin review | Visible only to you, admin, and reviewers; content cleared or dismissed — not retained after resolution |
 | Admin audit log | Record admin actions (role changes, bans, flag resolutions) for accountability | Visible only to administrators |
+| User reports | Submit reports against other users for harassment/spam/fake profile/etc. Reviewed by admin. | Visible to admin and appointed reviewers |
+| Global announcements | Admin-sent broadcast messages delivered as in-app notifications to all users | Visible to all non-banned recipients |
 | Device location (optional) | Compute distance to nearby mountains ("Mountains Near Me"). Only used when you open that screen; permission is requested in-context | Never sent to our servers — used locally on your device only |
 | Error/crash reports (Sentry) | Diagnose bugs: JS stack traces, breadcrumbs, user ID, app version | Sent to Sentry.io only; sensitive fields are scrubbed |
