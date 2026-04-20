@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: April 16, 2026** · **Version: 4**
+**Last updated: April 20, 2026** · **Version: 5**
 
 ## Overview
 
@@ -20,7 +20,7 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 - **Public profile setting** — your choice to make your profile visible to other users (off by default)
 
 ### Hiking Activity Data
-- **Hike logs** — date, duration, weather, companions (including tagged friends' usernames), privacy setting (Only Me, Friends, or Public), photos (up to 3, auto-compressed), notes, optional difficulty rating (1-9), optional conditions vote (good/not ideal), optional hike type (DIY/Tour/Hybrid), and optional cost (₱) you enter when logging a hike, including chain hikes (twin, trilogy, traverse). For chain hikes, each mountain can have its own difficulty rating and conditions vote.
+- **Hike logs** — date, duration, weather, companions (including tagged friends' usernames), privacy setting (Only Me, Friends, or Public), photos (up to 3, auto-compressed) with optional per-photo captions (≤200 characters), notes, optional difficulty rating (1-9), optional conditions vote (good/not ideal), optional hike type (DIY/Tour/Hybrid), and optional cost (₱) you enter when logging a hike, including chain hikes (twin, trilogy, traverse). For chain hikes, each mountain can have its own difficulty rating and conditions vote.
 - **Companion photos** — when you are tagged as a companion on another user's hike, you can add up to 3 photos to your companion record. If the hike owner removes you as a companion, your companion hike is converted to a standalone hike log (preserving your photos). If you untag yourself, your companion hikes record is deleted (including your photos)
 - **Planned hikes** — future hike dates, notes, privacy setting, and mountain selections you create
 - **Packing checklists** — items you add to planned hike checklists, and reusable checklist templates you create (up to 3)
