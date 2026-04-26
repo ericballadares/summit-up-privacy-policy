@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: April 20, 2026** · **Version: 5**
+**Last updated: April 26, 2026** · **Version: 6**
 
 ## Overview
 
@@ -14,7 +14,8 @@ Summit Up ("we", "our", or "the app") is a Philippine mountains hiking journal d
 - **Display name** — optional, set by you in your profile
 - **Home region** — optional, set by you in your profile
 - **Home province** — optional, set by you in your profile
-- **Mother mountain** — optional, your first mountain climbed (auto-detected from earliest hike or manually set)
+- **Mother mountain** — optional, your first mountain climbed. The mountain may be auto-detected from your earliest hike log or chosen manually
+- **Mother mountain year** — optional, the year you first hiked your mother mountain. Manual entry only (never auto-derived from hike logs); range 1950 to the current year
 - **Profile bio** — optional, up to 150 characters, set by you in your profile
 - **Profile photo** — optional, uploaded by you
 - **Public profile setting** — your choice to make your profile visible to other users (off by default)
@@ -62,7 +63,7 @@ Your data is used solely to provide the app's functionality:
 - **Planning** — to save and show your planned hikes with countdowns
 - **Trail reports, trail suggestions, and corrections** — to allow you to contribute mountain and trail data for community review
 - **Profile** — to personalize your experience within the app, including theme preferences
-- **Public profiles** — if you opt in, to display your username, display name, avatar, bio, hiking stats (hike count, mountains, provinces, regions), most visited mountains, and a province heatmap to other users. Your email, home region, and home province are **never** shown to other users.
+- **Public profiles** — if you opt in, to display your username, display name, avatar, bio, hiking stats (hike count, mountains, provinces, regions), most visited mountains, your mother mountain (and the year you first hiked it, if set), and a province heatmap to other users. Your email, home region, and home province are **never** shown to other users.
 - **User search** — to allow other users to find your profile by username or display name, only if you have enabled your public profile
 - **Friend system** — to allow you to connect with other hikers. Friends can view each other's profiles even if not set to public. Friend connections are visible only to the two users involved.
 - **Friend tagging** — you can only tag accepted friends as companions in a hike log. Their @username is stored as part of your hike data. A companion hike invite is sent to the tagged user. Non-friends cannot be tagged.
