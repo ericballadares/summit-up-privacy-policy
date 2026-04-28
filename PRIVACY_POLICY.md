@@ -1,6 +1,6 @@
 # Privacy Policy for Summit Up
 
-**Last updated: April 26, 2026** · **Version: 6**
+**Last updated: April 29, 2026** · **Version: 7**
 
 ## Overview
 
@@ -77,7 +77,7 @@ Your data is used solely to provide the app's functionality:
 - **Fingerprint login** — if you enable fingerprint login, your biometric data is processed **entirely on your device** by the operating system. We never receive, transmit, or store your fingerprint or biometric data. A lock preference flag is stored securely on your device using the operating system's secure keychain (Android Keystore / iOS Keychain). If multiple accounts are used on the same device, each account's fingerprint preference is stored independently — enabling fingerprint on one account does not affect another.
 - **Account suspension** — if an administrator determines that your account violates our terms, your account may be suspended. When suspended, you will see a notification upon opening the app and be signed out. You may contact us to appeal.
 - **Email changes** — when you change your email, a one-time verification code is sent to the new email address to confirm the change.
-- **Map sharing** — you can save or share your Summit Map as an image. Before saving or sharing, you can choose whether to display your display name or @username on the image. The image is generated locally on your device. If you choose to save it, the app requests access to your device's photo gallery. No data is sent to our servers during this process.
+- **Map sharing** — you can save or share your Summit Map as an image. Before saving or sharing, you can choose whether to display your display name or @username on the image. The image is generated locally on your device and routed through your device's share sheet so you can hand it to any app (Photos, Files, Drive, Messenger, etc.). The app does not request access to your photo gallery, and no data is sent to our servers during this process.
 - **Bucket list** — to save mountains you want to climb. Your bucket list is private and only visible to you.
 - **Community Stats** — the app displays aggregated, anonymous hiking statistics (most hiked mountains, popular provinces, monthly activity). No individual usernames or personal data are shown. All data is computed from aggregate hike counts.
 - **Network status** — the app detects whether your device is online or offline to display a notification. No data is sent or collected during this check.
